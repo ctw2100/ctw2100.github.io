@@ -4,31 +4,31 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>about - ASAP</title>
+<title>Class VS Struct - ASAP</title>
 <link rel="shortcut icon" href="https://ctw2100.github.io/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
 <link rel="stylesheet" href="https://ctw2100.github.io/media/css/tailwind.css">
 <link rel="stylesheet" href="https://ctw2100.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="about - ASAP - Atom Feed" href="https://ctw2100.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Class VS Struct - ASAP - Atom Feed" href="https://ctw2100.github.io/atom.xml">
 
     
 
-  <meta name="description" content="I am a normal person who want to explore this world
-" />
-  <meta property="og:title" content="about - ASAP">
-  <meta property="og:description" content="I am a normal person who want to explore this world
-" />
+  <meta name="description" content="Class and Struct is very similar in IOS development, So what&#39;s different between them?
+first, Class is reference types, ..." />
+  <meta property="og:title" content="Class VS Struct - ASAP">
+  <meta property="og:description" content="Class and Struct is very similar in IOS development, So what&#39;s different between them?
+first, Class is reference types, ..." />
   <meta property="og:type" content="articles">
-  <meta property="og:url" content="https://ctw2100.github.io/about/" />
+  <meta property="og:url" content="https://ctw2100.github.io/z7pJDxN0T/" />
   <meta property="og:image" content="https://ctw2100.github.io/images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
-  <meta name="twitter:title" content="about - ASAP">
-  <meta name="twitter:description" content="I am a normal person who want to explore this world
-">
+  <meta name="twitter:title" content="Class VS Struct - ASAP">
+  <meta name="twitter:description" content="Class and Struct is very similar in IOS development, So what&#39;s different between them?
+first, Class is reference types, ...">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://ctw2100.github.io/about/">
+  <link rel="canonical" href="https://ctw2100.github.io/z7pJDxN0T/">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
@@ -46,15 +46,52 @@
     <div class="max-w-4xl w-full mx-auto">
       <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
         <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
-          about
+          Class VS Struct
         </h1>
         
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2019-01-25 · 1 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-08-01 · 2 min read</div>
           
         </div>
         <div class="markdown mb-8" v-pre>
-          <p>I am a normal person who want to explore this world</p>
+          <h2 id="class-and-struct-is-very-similar-in-ios-development-so-whats-different-between-them">Class and Struct is very similar in IOS development, So what's different between them?</h2>
+<h3 id="first-class-is-reference-types-struct-is-value-types">first, Class is reference types, Struct is value types.</h3>
+<h2 id="so-whatis-reference-types-and-value-types">So what'is reference types and value types?</h2>
+<h3 id="reference-types-is-just-like-google-sheet-it-has-one-source-of-truth-everyone-can-both-edit-and-change">reference types is just like Google Sheet, it has one source of truth, everyone can both edit and change</h3>
+<img src="file:///Users/cclee/Documents/Gridea/post-images/1603776537737.png" alt="Google Sheet" style="zoom:25%;" />
+<h3 id="value-types-is-just-like-microsoft-excel-when-you-wanna-change-it-it-doesnt-change-me-file-just-like-i-sent-you-a-copy-file">value types is just like Microsoft Excel, when you wanna change it, it doesn't change me file, just like I sent you a copy file.</h3>
+<img src="file:///Users/cclee/Documents/Gridea/post-images/1603776688556.png" alt="Microsoft Excel" style="zoom:25%;" />
+<p>Here is some example explain different between Class and Struct:</p>
+<pre><code>class Developr {
+    var name: String?
+    var jobTitle: String?
+    var yearsExp: Int?
+
+    init(name: String, jobTitle: String, yearsExp: Int) {
+        self.name = name
+        self.jobTitle = jobTitle
+        self.yearsExp = yearsExp
+    }
+}
+
+var sean = Developer(name: &quot;Sean&quot;, jobTitle: &quot;IOS Enngineer&quot;, yearsExp: 5)
+var joe = sean
+joe.name = &quot;Joe&quot;
+sean.name // because Class is reference types, so sean.name is &quot;Joe&quot;
+</code></pre>
+<pre><code>struct Developr {
+    var name: String
+    var jobTitle: String
+    var yearsExp: Int
+
+    // struct don't have init in it.
+}
+
+var sean = Developer(name: &quot;Sean&quot;, jobTitle: &quot;IOS Enngineer&quot;, yearsExp: 5)
+var joe = sean // joe got copy of sean
+joe.name = &quot;Joe&quot;
+sean.name // because Class is value types, so sean.name is &quot;Sean&quot;
+</code></pre>
 
         </div>
         <!-- Share to Twitter, Weibo, Telegram -->
@@ -95,7 +132,24 @@
         </div>
       </div>
       <div class="post-toc-container">
-        
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#class-and-struct-is-very-similar-in-ios-development-so-whats-different-between-them">Class and Struct is very similar in IOS development, So what's different between them?</a>
+<ul>
+<li><a href="#first-class-is-reference-types-struct-is-value-types">first, Class is reference types, Struct is value types.</a></li>
+</ul>
+</li>
+<li><a href="#so-whatis-reference-types-and-value-types">So what'is reference types and value types?</a>
+<ul>
+<li><a href="#reference-types-is-just-like-google-sheet-it-has-one-source-of-truth-everyone-can-both-edit-and-change">reference types is just like Google Sheet, it has one source of truth, everyone can both edit and change</a></li>
+<li><a href="#value-types-is-just-like-microsoft-excel-when-you-wanna-change-it-it-doesnt-change-me-file-just-like-i-sent-you-a-copy-file">value types is just like Microsoft Excel, when you wanna change it, it doesn't change me file, just like I sent you a copy file.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
       </div>
     </div>
 

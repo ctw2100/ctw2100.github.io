@@ -4,31 +4,37 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>about - ASAP</title>
+<title>Draw Round Shape in SwiftUI - ASAP</title>
 <link rel="shortcut icon" href="https://ctw2100.github.io/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
 <link rel="stylesheet" href="https://ctw2100.github.io/media/css/tailwind.css">
 <link rel="stylesheet" href="https://ctw2100.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="about - ASAP - Atom Feed" href="https://ctw2100.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Draw Round Shape in SwiftUI - ASAP - Atom Feed" href="https://ctw2100.github.io/atom.xml">
 
     
 
-  <meta name="description" content="I am a normal person who want to explore this world
-" />
-  <meta property="og:title" content="about - ASAP">
-  <meta property="og:description" content="I am a normal person who want to explore this world
-" />
+  <meta name="description" content="use GeometryReader + UIBezierPath
+struct Rounded: Shape {
+    func path(in rect: CGRect) -&amp;gt; Path {
+        let path =..." />
+  <meta property="og:title" content="Draw Round Shape in SwiftUI - ASAP">
+  <meta property="og:description" content="use GeometryReader + UIBezierPath
+struct Rounded: Shape {
+    func path(in rect: CGRect) -&amp;gt; Path {
+        let path =..." />
   <meta property="og:type" content="articles">
-  <meta property="og:url" content="https://ctw2100.github.io/about/" />
+  <meta property="og:url" content="https://ctw2100.github.io/mk-4ZBDqR/" />
   <meta property="og:image" content="https://ctw2100.github.io/images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
-  <meta name="twitter:title" content="about - ASAP">
-  <meta name="twitter:description" content="I am a normal person who want to explore this world
-">
+  <meta name="twitter:title" content="Draw Round Shape in SwiftUI - ASAP">
+  <meta name="twitter:description" content="use GeometryReader + UIBezierPath
+struct Rounded: Shape {
+    func path(in rect: CGRect) -&amp;gt; Path {
+        let path =...">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://ctw2100.github.io/about/">
+  <link rel="canonical" href="https://ctw2100.github.io/mk-4ZBDqR/">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
@@ -46,15 +52,22 @@
     <div class="max-w-4xl w-full mx-auto">
       <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
         <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
-          about
+          Draw Round Shape in SwiftUI
         </h1>
         
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2019-01-25 · 1 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-10-26 · 1 min read</div>
           
         </div>
         <div class="markdown mb-8" v-pre>
-          <p>I am a normal person who want to explore this world</p>
+          <h2 id="use-geometryreader-uibezierpath">use GeometryReader + UIBezierPath</h2>
+<pre><code>struct Rounded: Shape {
+    func path(in rect: CGRect) -&gt; Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 40, height: 40))
+        return Path(path.cgPath)
+    }
+}
+</code></pre>
 
         </div>
         <!-- Share to Twitter, Weibo, Telegram -->
@@ -95,7 +108,14 @@
         </div>
       </div>
       <div class="post-toc-container">
-        
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#use-geometryreader-uibezierpath">use GeometryReader + UIBezierPath</a></li>
+</ul>
+</li>
+</ul>
+
       </div>
     </div>
 

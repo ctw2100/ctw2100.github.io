@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ctw2100.github.io</id>
     <title>ASAP</title>
-    <updated>2020-10-27T05:52:35.730Z</updated>
+    <updated>2020-10-27T05:56:01.866Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ctw2100.github.io"/>
     <link rel="self" href="https://ctw2100.github.io/atom.xml"/>
@@ -36,9 +36,9 @@
 <h3 id="first-class-is-reference-types-struct-is-value-types">first, Class is reference types, Struct is value types.</h3>
 <h2 id="so-whatis-reference-types-and-value-types">So what'is reference types and value types?</h2>
 <h3 id="reference-types-is-just-like-google-sheet-it-has-one-source-of-truth-everyone-can-both-edit-and-change">reference types is just like Google Sheet, it has one source of truth, everyone can both edit and change</h3>
-<img src="file:///Users/cclee/Documents/Gridea/post-images/1603776537737.png" alt="Google Sheet" style="zoom:25%;" />
+<figure data-type="image" tabindex="1"><img src="https://ctw2100.github.io/post-images/1603778139959.png" alt="" loading="lazy"></figure>
 <h3 id="value-types-is-just-like-microsoft-excel-when-you-wanna-change-it-it-doesnt-change-me-file-just-like-i-sent-you-a-copy-file">value types is just like Microsoft Excel, when you wanna change it, it doesn't change me file, just like I sent you a copy file.</h3>
-<img src="file:///Users/cclee/Documents/Gridea/post-images/1603776688556.png" alt="Microsoft Excel" style="zoom:25%;" />
+<figure data-type="image" tabindex="2"><img src="https://ctw2100.github.io/post-images/1603778146512.png" alt="" loading="lazy"></figure>
 <p>Here is some example explain different between Class and Struct:</p>
 <pre><code>class Developr {
     var name: String?

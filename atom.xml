@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ctw2100.github.io</id>
     <title>ASAP</title>
-    <updated>2020-10-27T06:09:48.163Z</updated>
+    <updated>2020-10-27T06:39:00.830Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ctw2100.github.io"/>
     <link rel="self" href="https://ctw2100.github.io/atom.xml"/>
@@ -10,6 +10,86 @@
     <logo>https://ctw2100.github.io/images/avatar.png</logo>
     <icon>https://ctw2100.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ASAP</rights>
+    <entry>
+        <title type="html"><![CDATA[enum in Swift]]></title>
+        <id>https://ctw2100.github.io/h1ZTBSkXg/</id>
+        <link href="https://ctw2100.github.io/h1ZTBSkXg/">
+        </link>
+        <updated>2020-10-27T06:10:15.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="whats-is-enum">What's is enum?</h2>
+<h3 id="its-group-of-related-values">it's Group of related values</h3>
+<h2 id="how-to-use-enum-here-is-some-example">How to use enum, here is some example:</h2>
+<pre><code>
+enum SocialPlatform {
+    case twitter
+    case facebook
+    case instagram
+    case linkedIn
+}
+
+func shareImage(on platform: SocialPlatform) {
+    switch platform {
+        case .twitter:
+            //twitter etc.
+        case .facebook:
+            // facebook etc.
+        case .instagram:
+            // instagram etc.
+        case .linkedIn:
+            // linkedIn etc.
+    }
+}
+shareImage(on: .twitter) // wow!!! this is how to use enum
+</code></pre>
+<h2 id="another-way-to-use-enum">another way to use enum</h2>
+<pre><code>enum SFSymbols {
+    static let location = UIImage(systemName: &quot;mappin.and.ellipse&quot;)
+    static let repos = UIImage(systemName: &quot;folder&quot;)
+    static let gists = UIImage(systemName: &quot;text.alignleft&quot;)
+}
+SFSymbols.repos // this is more readable and clear.
+</code></pre>
+<h2 id="rawvalue-in-enum">rawValue in enum</h2>
+<pre><code>enum SocialPlatform: String, CaseIterable {
+    case twitter        = &quot;twitter&quot;
+    case facebook    = &quot;facebook&quot;
+    case instagram   = &quot;instagram&quot;
+    case linkedIn      = &quot;linkedIn&quot;
+}
+
+func getOpinion(on platform: SocialPlatform) {
+    print(platform.rawValue)
+}
+getOpinion(on: .facebook) // this will print facebook
+
+print(SocialPlatform.allCases.count) // print number of all cases
+
+// print all cases rawValue
+for platform in SocialPlatform.allCases {
+    print(platform.rawValue)
+}
+</code></pre>
+<h2 id="associated-values">Associated Values</h2>
+<pre><code>enum SocialPlatform {
+    case twitter(num: Int)
+    case facebook(num: int)
+    case instagram
+    case linkedIn
+}
+
+func getNum(for platform: SocialPlatform) {
+    switch platform {
+        case .twitter(let followers) where followers &gt; 10_000: print(&quot;Great!&quot;)
+        case .facebook(let followers) where followers &gt; 19_000 : print(&quot;EPIC!&quot;)
+        case .twitter, facebook, instagram, linkedIn: print(&quot;Nice Try!&quot;)
+    }
+}
+getNum(.twitter(num: 108_000)) // print Great!!
+getNum(.twitter(num: 5)) // print Nice Try
+getNum(.instagram) // print Nice Try
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Optional in Swift]]></title>
         <id>https://ctw2100.github.io/iSELc1K_N/</id>

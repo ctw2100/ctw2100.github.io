@@ -4,34 +4,43 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Optional in Swift - ASAP</title>
+<title>enum in Swift - ASAP</title>
 <link rel="shortcut icon" href="https://ctw2100.github.io/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
 <link rel="stylesheet" href="https://ctw2100.github.io/media/css/tailwind.css">
 <link rel="stylesheet" href="https://ctw2100.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Optional in Swift - ASAP - Atom Feed" href="https://ctw2100.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="enum in Swift - ASAP - Atom Feed" href="https://ctw2100.github.io/atom.xml">
 
     
 
-  <meta name="description" content="if some value is optional, and it hasn&#39;s no value, so it&#39;s nil, otherwise it&#39;s that value
-guard with optional
-func tripl..." />
-  <meta property="og:title" content="Optional in Swift - ASAP">
-  <meta property="og:description" content="if some value is optional, and it hasn&#39;s no value, so it&#39;s nil, otherwise it&#39;s that value
-guard with optional
-func tripl..." />
+  <meta name="description" content="What&#39;s is enum?
+it&#39;s Group of related values
+How to use enum, here is some example:
+
+enum SocialPlatform {
+    case twit..." />
+  <meta property="og:title" content="enum in Swift - ASAP">
+  <meta property="og:description" content="What&#39;s is enum?
+it&#39;s Group of related values
+How to use enum, here is some example:
+
+enum SocialPlatform {
+    case twit..." />
   <meta property="og:type" content="articles">
-  <meta property="og:url" content="https://ctw2100.github.io/iSELc1K_N/" />
+  <meta property="og:url" content="https://ctw2100.github.io/h1ZTBSkXg/" />
   <meta property="og:image" content="https://ctw2100.github.io/images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
-  <meta name="twitter:title" content="Optional in Swift - ASAP">
-  <meta name="twitter:description" content="if some value is optional, and it hasn&#39;s no value, so it&#39;s nil, otherwise it&#39;s that value
-guard with optional
-func tripl...">
+  <meta name="twitter:title" content="enum in Swift - ASAP">
+  <meta name="twitter:description" content="What&#39;s is enum?
+it&#39;s Group of related values
+How to use enum, here is some example:
+
+enum SocialPlatform {
+    case twit...">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://ctw2100.github.io/iSELc1K_N/">
+  <link rel="canonical" href="https://ctw2100.github.io/h1ZTBSkXg/">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
@@ -51,46 +60,85 @@ func tripl...">
     <div class="max-w-4xl w-full mx-auto">
       <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
         <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
-          Optional in Swift
+          enum in Swift
         </h1>
         
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2020-10-27 · 1 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-10-27 · 2 min read</div>
           
         </div>
         <div class="markdown mb-8" v-pre>
-          <h2 id="if-some-value-is-optional-and-it-hasns-no-value-so-its-nil-otherwise-its-that-value">if some value is optional, and it hasn's no value, so it's nil, otherwise it's that value</h2>
-<h2 id="guard-with-optional">guard with optional</h2>
-<pre><code>func tripleNumber(number: Int?) {
-    guard let number = number else {
-        // if number is nil run this code
-        return
+          <h2 id="whats-is-enum">What's is enum?</h2>
+<h3 id="its-group-of-related-values">it's Group of related values</h3>
+<h2 id="how-to-use-enum-here-is-some-example">How to use enum, here is some example:</h2>
+<pre><code>
+enum SocialPlatform {
+    case twitter
+    case facebook
+    case instagram
+    case linkedIn
+}
+
+func shareImage(on platform: SocialPlatform) {
+    switch platform {
+        case .twitter:
+            //twitter etc.
+        case .facebook:
+            // facebook etc.
+        case .instagram:
+            // instagram etc.
+        case .linkedIn:
+            // linkedIn etc.
     }
-    // if number is not nil, run this
-    number * 3
+}
+shareImage(on: .twitter) // wow!!! this is how to use enum
+</code></pre>
+<h2 id="another-way-to-use-enum">another way to use enum</h2>
+<pre><code>enum SFSymbols {
+    static let location = UIImage(systemName: &quot;mappin.and.ellipse&quot;)
+    static let repos = UIImage(systemName: &quot;folder&quot;)
+    static let gists = UIImage(systemName: &quot;text.alignleft&quot;)
+}
+SFSymbols.repos // this is more readable and clear.
+</code></pre>
+<h2 id="rawvalue-in-enum">rawValue in enum</h2>
+<pre><code>enum SocialPlatform: String, CaseIterable {
+    case twitter        = &quot;twitter&quot;
+    case facebook    = &quot;facebook&quot;
+    case instagram   = &quot;instagram&quot;
+    case linkedIn      = &quot;linkedIn&quot;
+}
+
+func getOpinion(on platform: SocialPlatform) {
+    print(platform.rawValue)
+}
+getOpinion(on: .facebook) // this will print facebook
+
+print(SocialPlatform.allCases.count) // print number of all cases
+
+// print all cases rawValue
+for platform in SocialPlatform.allCases {
+    print(platform.rawValue)
 }
 </code></pre>
-<h2 id="force-unwrapping">Force Unwrapping</h2>
-<pre><code>let number1 = Int?
-
-// if number1 is nil, this code will crash!!!! Just Be Carefull of it.
-let number2 = number1!
-</code></pre>
-<h2 id="optional-chaining">Optional Chaining</h2>
-<pre><code>struct Device {
-    var type: String
-    var price: Float
-    var color: String
+<h2 id="associated-values">Associated Values</h2>
+<pre><code>enum SocialPlatform {
+    case twitter(num: Int)
+    case facebook(num: int)
+    case instagram
+    case linkedIn
 }
 
-var myPhone: Device?  // myPhone now is Optional value
-
-let devicePrice = myPhone?.price // now devicePrice is Optional value too.
-
-// if you wanna use devicePrice, do this:
-if let devicePrice = devicePrice {
-    devicePrice = devicePrice + 9.88
+func getNum(for platform: SocialPlatform) {
+    switch platform {
+        case .twitter(let followers) where followers &gt; 10_000: print(&quot;Great!&quot;)
+        case .facebook(let followers) where followers &gt; 19_000 : print(&quot;EPIC!&quot;)
+        case .twitter, facebook, instagram, linkedIn: print(&quot;Nice Try!&quot;)
+    }
 }
+getNum(.twitter(num: 108_000)) // print Great!!
+getNum(.twitter(num: 5)) // print Nice Try
+getNum(.instagram) // print Nice Try
 </code></pre>
 
         </div>
@@ -135,10 +183,15 @@ if let devicePrice = devicePrice {
         <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#if-some-value-is-optional-and-it-hasns-no-value-so-its-nil-otherwise-its-that-value">if some value is optional, and it hasn's no value, so it's nil, otherwise it's that value</a></li>
-<li><a href="#guard-with-optional">guard with optional</a></li>
-<li><a href="#force-unwrapping">Force Unwrapping</a></li>
-<li><a href="#optional-chaining">Optional Chaining</a></li>
+<li><a href="#whats-is-enum">What's is enum?</a>
+<ul>
+<li><a href="#its-group-of-related-values">it's Group of related values</a></li>
+</ul>
+</li>
+<li><a href="#how-to-use-enum-here-is-some-example">How to use enum, here is some example:</a></li>
+<li><a href="#another-way-to-use-enum">another way to use enum</a></li>
+<li><a href="#rawvalue-in-enum">rawValue in enum</a></li>
+<li><a href="#associated-values">Associated Values</a></li>
 </ul>
 </li>
 </ul>

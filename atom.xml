@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ctw2100.github.io</id>
     <title>ASAP</title>
-    <updated>2020-10-27T06:39:17.024Z</updated>
+    <updated>2020-10-27T06:50:03.482Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ctw2100.github.io"/>
     <link rel="self" href="https://ctw2100.github.io/atom.xml"/>
@@ -11,11 +11,52 @@
     <icon>https://ctw2100.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ASAP</rights>
     <entry>
+        <title type="html"><![CDATA[Optional in Swift]]></title>
+        <id>https://ctw2100.github.io/iSELc1K_N/</id>
+        <link href="https://ctw2100.github.io/iSELc1K_N/">
+        </link>
+        <updated>2020-09-01T05:56:21.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="if-some-value-is-optional-and-it-hasns-no-value-so-its-nil-otherwise-its-that-value">if some value is optional, and it hasn's no value, so it's nil, otherwise it's that value</h2>
+<h2 id="guard-with-optional">guard with optional</h2>
+<pre><code>func tripleNumber(number: Int?) {
+    guard let number = number else {
+        // if number is nil run this code
+        return
+    }
+    // if number is not nil, run this
+    number * 3
+}
+</code></pre>
+<h2 id="force-unwrapping">Force Unwrapping</h2>
+<pre><code>let number1 = Int?
+
+// if number1 is nil, this code will crash!!!! Just Be Carefull of it.
+let number2 = number1!
+</code></pre>
+<h2 id="optional-chaining">Optional Chaining</h2>
+<pre><code>struct Device {
+    var type: String
+    var price: Float
+    var color: String
+}
+
+var myPhone: Device?  // myPhone now is Optional value
+
+let devicePrice = myPhone?.price // now devicePrice is Optional value too.
+
+// if you wanna use devicePrice, do this:
+if let devicePrice = devicePrice {
+    devicePrice = devicePrice + 9.88
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[enum in Swift]]></title>
         <id>https://ctw2100.github.io/h1ZTBSkXg/</id>
         <link href="https://ctw2100.github.io/h1ZTBSkXg/">
         </link>
-        <updated>2020-10-27T06:10:15.000Z</updated>
+        <updated>2020-08-19T06:10:15.000Z</updated>
         <content type="html"><![CDATA[<h2 id="whats-is-enum">What's is enum?</h2>
 <h3 id="its-group-of-related-values">it's Group of related values</h3>
 <h2 id="how-to-use-enum-here-is-some-example">How to use enum, here is some example:</h2>
@@ -87,47 +128,6 @@ func getNum(for platform: SocialPlatform) {
 getNum(.twitter(num: 108_000)) // print Great!!
 getNum(.twitter(num: 5)) // print Nice Try
 getNum(.instagram) // print Nice Try
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Optional in Swift]]></title>
-        <id>https://ctw2100.github.io/iSELc1K_N/</id>
-        <link href="https://ctw2100.github.io/iSELc1K_N/">
-        </link>
-        <updated>2020-10-27T05:56:21.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="if-some-value-is-optional-and-it-hasns-no-value-so-its-nil-otherwise-its-that-value">if some value is optional, and it hasn's no value, so it's nil, otherwise it's that value</h2>
-<h2 id="guard-with-optional">guard with optional</h2>
-<pre><code>func tripleNumber(number: Int?) {
-    guard let number = number else {
-        // if number is nil run this code
-        return
-    }
-    // if number is not nil, run this
-    number * 3
-}
-</code></pre>
-<h2 id="force-unwrapping">Force Unwrapping</h2>
-<pre><code>let number1 = Int?
-
-// if number1 is nil, this code will crash!!!! Just Be Carefull of it.
-let number2 = number1!
-</code></pre>
-<h2 id="optional-chaining">Optional Chaining</h2>
-<pre><code>struct Device {
-    var type: String
-    var price: Float
-    var color: String
-}
-
-var myPhone: Device?  // myPhone now is Optional value
-
-let devicePrice = myPhone?.price // now devicePrice is Optional value too.
-
-// if you wanna use devicePrice, do this:
-if let devicePrice = devicePrice {
-    devicePrice = devicePrice + 9.88
-}
 </code></pre>
 ]]></content>
     </entry>
